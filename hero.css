@@ -1,10 +1,11 @@
 * {
     background-color:#01030A ;
 }
-/*#2e282a,   */
 
 .hero {
-    background: url('AbandonedAnguishedCatfish-size_restricted.gif');
-    filter: blur(10px);
-    -webkit-filter: blur(10px);
+    background: url('./hero.gif');
 }
+
+.hero-cont{
+	color: #fa8128 ;
+}	
