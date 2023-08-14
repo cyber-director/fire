@@ -6,5 +6,5 @@
 .hero {
     background: url('AbandonedAnguishedCatfish-size_restricted.gif');
     filter: blur(10px);
-    -webkit-filter:10px;
+    -webkit-filter: blur(10px);
 }
