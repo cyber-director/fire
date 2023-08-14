@@ -1,0 +1,633 @@
+@import url('https://fonts.googleapis.com/css2?family=Edu+SA+Beginner&display=swap');
+
+/* Reset some default styles */
+body, h1, h2, h3, p, ul, li {
+  margin: 0;
+  padding: 0;
+}
+.headsss{
+  align-self:center; 
+}
+body {
+  font-family: 'Edu SA Beginner', cursive;
+  line-height: 1.6;
+  font-size: x-large;
+  background-color: #FFC26F;
+}
+
+.content {
+  margin-left: 0;
+  padding: 20px;
+}
+
+section {
+  margin-bottom: 40px;
+}
+
+h1 {
+  font-size: 40px; /* Mobile font size */
+}
+
+h2 {
+  font-size: 30px; /* Mobile font size */
+}
+
+#taskbar {
+  display: none; /* Hide taskbar on mobile */
+}
+
+#taskbar ul {
+  list-style: none;
+  padding: 0;
+}
+
+#taskbar li {
+  margin-bottom: 10px;
+  cursor: pointer;
+  font-size: 20px; /* Mobile font size */
+  transition: 0.2s, color 0.2s;
+}
+
+#bottom-bar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80px; /* Mobile height */
+  background-color: #111;
+  color: #fff;
+  padding: 10px;
+}
+
+#bottom-bar a {
+  color: #fff;
+  text-decoration: none;
+  margin: 0 10px;
+}
+
+/* Media Queries for Tablet and Desktop */
+@media (min-width: 768px) {
+  .content {
+    margin-left: 220px;
+  }
+
+  h1 {
+    font-size: 60px; /* Tablet font size */
+  }
+
+  h2 {
+    font-size: 40px; /* Tablet font size */
+  }
+
+  #taskbar {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    color: #2121215b;
+    padding: 10px;
+    z-index: 999;
+    height: 100vh;
+  }
+
+  #taskbar li {
+    font-size: x-large; /* Tablet font size */
+  }
+}
+
+/* Media Queries for Large Desktop Screens */
+@media (min-width: 1200px) {
+  h1 {
+    font-size: 80px; /* Large desktop font size */
+  }
+
+  h2 {
+    font-size: 50px; /* Large desktop font size */
+  }
+
+  #taskbar li {
+    font-size: x-large; /* Large desktop font size */
+  }
+}
+
+/* Scrollbar Styles for All Devices */
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #cc5b05;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #ee9e08;
+}
+
+.text-shadow{
+  text-shadow: 9px 6px 11px rgba(0,0,0,0.64);
+}
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.flip-card-container {
+  --hue: 150;
+  --primary: hsl(var(--hue), 50%, 50%);
+  --white-1: hsl(0, 0%, 90%);
+  --white-2: hsl(0, 0%, 80%);
+  --dark: hsl(var(--hue), 25%, 10%);
+  --grey: hsl(0, 0%, 50%);
+
+  width: 300px;
+  height: 500px;
+  margin: 20px;
+
+  perspective: 1000px;
+}
+
+/* .flip-card */
+.flip-card {
+  width: inherit;
+  height: inherit;
+
+  position: relative;
+  transform-style: preserve-3d;
+  transition: .6s .1s;
+}
+
+/* hover and focus-within states */
+.flip-card-container:hover .flip-card,
+.flip-card-container:focus-within .flip-card {
+  transform: rotateY(180deg);
+}
+
+/* .card-... */
+.card-front,
+.card-back {
+  width: 100%;
+  height: 100%;
+  border-radius: 24px;
+
+  background: var(--dark);
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+
+  backface-visibility: hidden;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* .card-front */
+.card-front {
+  transform: rotateY(0deg);
+  z-index: 2;
+}
+
+/* .card-back */
+.card-back {
+  transform: rotateY(180deg);
+  z-index: 1;
+}
+
+/* figure */
+figure {
+  z-index: -1;
+}
+
+/* figure, .img-bg */
+figure,
+.img-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+}
+
+/* img */
+img {
+  height: 100%;
+  border-radius: 24px;
+}
+
+/* figcaption */
+figcaption {
+  display: block;
+
+  width: auto;
+  margin-top: 12%;
+  padding: 8px 22px;
+
+  font-weight: bold;
+  line-height: 1.6;
+  letter-spacing: 2px;
+  word-spacing: 6px;
+  text-align: right;
+
+  position: absolute;
+  top: 0;
+  right: 12px;
+
+  color: var(--white-1);
+  background: hsla(var(--hue), 25%, 10%, .5);
+}
+
+/* .img-bg */
+.img-bg {
+  background: hsla(var(--hue), 25%, 10%, .5);
+}
+
+.card-front .img-bg {
+  clip-path: polygon(0 20%, 100% 40%, 100% 100%, 0 100%);
+}
+
+.card-front .img-bg::before {
+  content: "";
+
+  position: absolute;
+  top: 34%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(18deg);
+
+  width: 100%;
+  height: 6px;
+  border: 1px solid var(--primary);
+  border-left-color: transparent;
+  border-right-color: transparent;
+
+  transition: .1s;
+}
+
+.card-back .img-bg {
+  clip-path: polygon(0 0, 100% 0, 100% 80%, 0 60%);
+}
+
+/* hover state */
+.flip-card-container:hover .card-front .img-bg::before {
+  width: 6px;
+  border-left-color: var(--primary);
+  border-right-color: var(--primary);
+}
+
+/* ul */
+ul {
+  padding-top: 50%;
+  margin: 0 auto;
+  width: 70%;
+  height: 100%;
+
+  list-style: none;
+  color: var(--white-1);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+/* li */
+li {
+  width: 100%;
+  margin-top: 12px;
+  padding-bottom: 12px;
+
+  font-size: 14px;
+  text-align: center;
+
+  position: relative;
+}
+
+li:nth-child(2n) {
+  color: var(--white-2);
+}
+
+li:not(:last-child)::after {
+  content: "";
+
+  position: absolute;
+  bottom: 0;
+  left: 0;
+
+  width: 100%;
+  height: 1px;
+
+  background: currentColor;
+  opacity: .2;
+}
+
+/* button */
+.modal button {
+  font-family: inherit;
+  font-weight: bold;
+  color: var(--white-1);
+
+  letter-spacing: 2px;
+
+  padding: 9px 20px;
+  border: 1px solid var(--grey);
+  border-radius: 1000px;
+  background: transparent;
+  transition: .3s;
+
+  cursor: pointer;
+}
+
+.modal button:hover,
+.modal button:focus {
+  color: var(--primary);
+  background: hsla(var(--hue), 25%, 10%, .2);
+  border-color: currentColor;
+}
+
+.modal button:active {
+  transform: translate(2px);
+}
+
+/* .design-container */
+.design-container {
+  --tr: 90;
+  --op: .5;
+
+  width: 100%;
+  height: 100%;
+
+  background: transparent;
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  pointer-events: none;
+}
+
+/* .design */
+.design {
+  display: block;
+
+  background: var(--grey);
+  position: absolute;
+
+  opacity: var(--op);
+  transition: .3s;
+}
+
+.design--1,
+.design--2,
+.design--3,
+.design--4 {
+  width: 1px;
+  height: 100%;
+}
+
+.design--1,
+.design--2 {
+  top: 0;
+  transform: translateY(calc((var(--tr) - (var(--tr) * 2)) * 1%))
+}
+
+.design--1 {
+  left: 20%;
+}
+
+.design--2 {
+  left: 80%;
+}
+
+.design--3,
+.design--4 {
+  bottom: 0;
+  transform: translateY(calc((var(--tr) + (var(--tr) - var(--tr))) * 1%))
+}
+
+.design--3 {
+  left: 24%;
+}
+
+.design--4 {
+  left: 76%;
+}
+
+.design--5,
+.design--6,
+.design--7,
+.design--8 {
+  width: 100%;
+  height: 1px;
+}
+
+.design--5,
+.design--6 {
+  left: 0;
+  transform: translateX(calc((var(--tr) - (var(--tr) * 2)) * 1%));
+}
+
+.design--5 {
+  top: 41%;
+}
+
+.design--6 {
+  top: 59%;
+}
+
+.design--7,
+.design--8 {
+  right: 0;
+  transform: translateX(calc((var(--tr) + (var(--tr) - var(--tr))) * 1%))
+}
+
+.design--7 {
+  top: 44%;
+}
+
+.design--8 {
+  top: 56%;
+}
+
+/* states */
+button:hover+.design-container,
+button:active+.design-container,
+button:focus+.design-container {
+  --tr: 20;
+  --op: .7;
+}
+
+#mySidenav a {
+  font-family: 'Work Sans', sans-serif;
+  position: fixed;
+  left: -80px;
+  transition: 0.3s;
+  padding: 15px;
+  width: 100px;
+  text-decoration: none;
+  font-size: 20px;
+  color: white;
+  border-radius: 0 5px 5px 0;
+}
+
+#mySidenav a:hover {
+  left: 0;
+}
+
+#Home {
+  top: 20px;
+  background-color: #04AA6D;
+}
+
+#FAQ {
+  top: 100px;
+  background-color: #2196F3;
+}
+
+#About {
+  top: 180px;
+  background-color: #f44336;
+}
+
+#search {
+  top: 260px;
+  background-color: #555;
+}
+
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+
+  border-radius: 15px;
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto; /* 15% from the top and centered */
+  padding: 15px;
+  border: 1px solid #888;
+  width: 85%; /* Could be more or less, depending on screen size */
+
+  border-radius: 15px;
+}
+
+.modal-body {
+  display: flex;
+  flex-direction: row;
+
+  flex-wrap: wrap;
+}
+
+.box {
+  --border-size: 3px;
+  --border-angle: 0turn;
+  background-image: conic-gradient(
+      from var(--border-angle),
+      rgb(0, 0, 0),
+      rgb(0, 0, 0) 50%,
+      rgb(0, 0, 0)
+    ),
+    conic-gradient(from var(--border-angle), transparent 20%, rgb(255, 0, 0), rgb(119, 0, 255));
+  background-size: calc(100% - (var(--border-size) * 2))
+      calc(100% - (var(--border-size) * 2)),
+    cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+
+
+  animation: bg-spin 3s linear infinite;
+}
+
+.box:hover {
+  animation-play-state: paused;
+}
+
+@keyframes bg-spin {
+  to {
+    --border-angle: 1turn;
+  }
+}
+
+@property --border-angle {
+  syntax: "<angle>";
+  inherits: true;
+  initial-value: 0turn;
+}
+
+#myBtn {
+  color: white;
+  height: 40px;
+  width: 100px;
+
+  display: inline-block;
+}
+
+.card-back a {
+  text-decoration: none;
+  color: inherit;
+
+}
+
+.close {
+  height: 45px;
+  width: 45px;
+
+  display: flex;
+  justify-self: center;
+
+  border-radius: 5px;
+
+  background-color: white;
+
+  position: fixed;
+
+}
+
+.modal-header {
+
+
+  text-align: center;
+  
+}
+
+
+.hero {
+  background: url('AbandonedAnguishedCatfish-size_restricted.gif');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  padding: 30px;
+
+  height: 100vh;
+
+  display: flex;
+  align-items: center;
+}
+.headsss {
+  text-align: center;
+  color: #fff;
+}
+#hero-cont {
+  text-align: right;
+  color: white;
+
+  margin-left: 30%;
+
+  background-color: #111;
+  border-radius: 10px;
+}
+#hero-btn {
+  text-align: center;
+}

@@ -1,0 +1,151 @@
+body{
+  font-family: 'Work Sans', sans-serif;
+  line-height: 1.6;
+}
+
+#mySidenav a {
+  position: fixed;
+  left: -80px;
+  transition: 0.3s;
+  padding: 15px;
+  width: 100px;
+  text-decoration: none;
+  font-size: 20px;
+  color: white;
+  border-radius: 0 5px 5px 0;
+}
+
+#mySidenav a:hover {
+  left: 0;
+}
+
+#Home {
+  top: 20px;
+  background-color: #04AA6D;
+}
+
+#FAQ {
+  top: 100px;
+  background-color: #2196F3;
+}
+
+#About {
+  top: 180px;
+  background-color: #f44336;
+}
+
+#search {
+  top: 260px;
+  background-color: #555;
+}
+
+.faq-heading{
+    font-size: 100px;
+    left:70px;
+    border-bottom: #777;
+    padding: 20px 60px;
+}
+.faq-container{
+display: flex;
+justify-content: center;
+flex-direction: column;
+}
+.hr-line{
+  width: 60%;
+  margin: auto;
+  
+}
+/* Style the buttons that are used to open and close the faq-page body */
+.faq-page {
+    /* background-color: #eee; */
+    color: #444;
+    cursor: pointer;
+    padding: 30px 20px;
+    width: 60%;
+    border: none;
+    outline: none;
+    transition: 0.4s;
+    margin: auto;
+}
+.faq-body{
+    margin: auto;
+    /* text-align: center; */
+   width: 50%; 
+   padding: auto;
+   
+}
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+.active,
+.faq-page:hover {
+    background-color: #F9F9F9;
+}
+/* Style the faq-page panel. Note: hidden by default */
+.faq-body {
+    padding: 0 18px;
+    background-color: white;
+    display: none;
+    overflow: hidden;
+}
+.faq-page:after {
+    content: '\02795';
+    /* Unicode character for "plus" sign (+) */
+    font-size: 13px;
+    color: #777;
+    float: right;
+    margin-left: 5px;
+}
+.active:after {
+    content: "\2796";
+    /* Unicode character for "minus" sign (-) */
+}
+
+.faq-heading {
+    margin-top: 0px;
+    margin-bottom: 30px;
+    display: inline-block;
+    position: relative;
+    }
+  
+.faq-heading::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 10px;
+    bottom: 0;
+    left: 0;
+    background: rgb(127,0,180);
+    background: linear-gradient(27deg, rgba(127,0,180,1) 0%, rgba(9,9,121,1) 100%);
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+  }
+  
+.faq-heading:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+  }
+
+@media only screen and (max-width: 1024px) {
+  .faq-heading {
+    font-size: 50px;
+  }
+  h1 .faq-page {
+    margin: 0 100 1 100;
+  }
+}
+
+@media only screen and (max-width: 696px) {
+  .faq-page:after{
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 320px) {
+  .faq-body {
+    margin: 0 0 0 0;
+  }
+  .faq-page {
+    padding-right: 0;
+    margin: 0;
+  }
+}
