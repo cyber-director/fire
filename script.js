@@ -99,10 +99,3 @@ window.onclick = function(event) {
     modal.style.display = "none";
   }
 }
-
-function readMoreCont() {
-  document.getElementById('section2').scrollIntoView();
-
-  const sideNav = document.getElementById('mySidenav');
-  sideNav.style.display = 'block';
-}
