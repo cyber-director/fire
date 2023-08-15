@@ -1,7 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Edu+SA+Beginner&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&display=swap');
 
-/* Reset some default styles */
 body, h1, h2, h3, p, ul, li {
   margin: 0;
   padding: 0;
@@ -150,15 +149,15 @@ section {
 }
 
 h1 {
-  font-size: 40px; /* Mobile font size */
+  font-size: 40px;
 }
 
 h2 {
-  font-size: 30px; /* Mobile font size */
+  font-size: 30px;
 }
 
 #taskbar {
-  display: none; /* Hide taskbar on mobile */
+  display: none;
 }
 
 #taskbar ul {
@@ -169,7 +168,7 @@ h2 {
 #taskbar li {
   margin-bottom: 10px;
   cursor: pointer;
-  font-size: 20px; /* Mobile font size */
+  font-size: 20px;
   transition: 0.2s, color 0.2s;
 }
 
@@ -177,7 +176,7 @@ h2 {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 80px; /* Mobile height */
+  height: 80px;
   background-color: #111;
   color: #fff;
   padding: 10px;
@@ -189,18 +188,17 @@ h2 {
   margin: 0 10px;
 }
 
-/* Media Queries for Tablet and Desktop */
 @media (min-width: 768px) {
   .content {
     margin-left: 220px;
   }
 
   h1 {
-    font-size: 60px; /* Tablet font size */
+    font-size: 60px;
   }
 
   h2 {
-    font-size: 40px; /* Tablet font size */
+    font-size: 40px;
   }
 
   #taskbar {
@@ -215,26 +213,24 @@ h2 {
   }
 
   #taskbar li {
-    font-size: x-large; /* Tablet font size */
+    font-size: x-large;
   }
 }
 
-/* Media Queries for Large Desktop Screens */
 @media (min-width: 1200px) {
   h1 {
-    font-size: 80px; /* Large desktop font size */
+    font-size: 80px;
   }
 
   h2 {
-    font-size: 50px; /* Large desktop font size */
+    font-size: 50px;
   }
 
   #taskbar li {
-    font-size: x-large; /* Large desktop font size */
+    font-size: x-large;
   }
 }
 
-/* Scrollbar Styles for All Devices */
 ::-webkit-scrollbar {
   width: 12px;
 }
@@ -274,99 +270,80 @@ h2 {
   perspective: 1000px;
 }
 
-/* .flip-card */
 .flip-card {
   width: inherit;
   height: inherit;
-
   position: relative;
   transform-style: preserve-3d;
   transition: .6s .1s;
 }
 
-/* hover and focus-within states */
 .flip-card-container:hover .flip-card,
 .flip-card-container:focus-within .flip-card {
   transform: rotateY(180deg);
 }
 
-/* .card-... */
 .card-front,
 .card-back {
   width: 100%;
   height: 100%;
   border-radius: 24px;
-
   background: var(--dark);
   position: absolute;
   top: 0;
   left: 0;
   overflow: hidden;
-
   backface-visibility: hidden;
-
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-/* .card-front */
 .card-front {
   transform: rotateY(0deg);
   z-index: 2;
 }
 
-/* .card-back */
 .card-back {
   transform: rotateY(180deg);
   z-index: 1;
 }
 
-/* figure */
 figure {
   z-index: -1;
 }
 
-/* figure, .img-bg */
 figure,
 .img-bg {
   position: absolute;
   top: 0;
   left: 0;
-
   width: 100%;
   height: 100%;
 }
 
-/* img */
 img {
   height: 100%;
   border-radius: 24px;
 }
 
-/* figcaption */
 figcaption {
   display: block;
-
   width: auto;
   margin-top: 12%;
   padding: 8px 22px;
-
   font-weight: bold;
   line-height: 1.6;
   letter-spacing: 2px;
   word-spacing: 6px;
   text-align: right;
-
   position: absolute;
   top: 0;
   right: 12px;
-
   color: var(--white-1);
   background: hsla(var(--hue), 25%, 10%, .5);
 }
 
-/* .img-bg */
 .img-bg {
   background: hsla(var(--hue), 25%, 10%, .5);
 }
@@ -377,18 +354,15 @@ figcaption {
 
 .card-front .img-bg::before {
   content: "";
-
   position: absolute;
   top: 34%;
   left: 50%;
   transform: translate(-50%, -50%) rotate(18deg);
-
   width: 100%;
   height: 6px;
   border: 1px solid var(--primary);
   border-left-color: transparent;
   border-right-color: transparent;
-
   transition: .1s;
 }
 
@@ -396,38 +370,31 @@ figcaption {
   clip-path: polygon(0 0, 100% 0, 100% 80%, 0 60%);
 }
 
-/* hover state */
 .flip-card-container:hover .card-front .img-bg::before {
   width: 6px;
   border-left-color: var(--primary);
   border-right-color: var(--primary);
 }
 
-/* ul */
 ul {
   padding-top: 50%;
   margin: 0 auto;
   width: 70%;
   height: 100%;
-
   list-style: none;
   color: var(--white-1);
-
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
 }
 
-/* li */
 li {
   width: 100%;
   margin-top: 12px;
   padding-bottom: 12px;
-
   font-size: 14px;
   text-align: center;
-
   position: relative;
 }
 
@@ -437,32 +404,25 @@ li:nth-child(2n) {
 
 li:not(:last-child)::after {
   content: "";
-
   position: absolute;
   bottom: 0;
   left: 0;
-
   width: 100%;
   height: 1px;
-
   background: currentColor;
   opacity: .2;
 }
 
-/* button */
 .modal button {
   font-family: inherit;
   font-weight: bold;
   color: var(--white-1);
-
   letter-spacing: 2px;
-
   padding: 9px 20px;
   border: 1px solid var(--grey);
   border-radius: 1000px;
   background: transparent;
   transition: .3s;
-
   cursor: pointer;
 }
 
@@ -477,29 +437,22 @@ li:not(:last-child)::after {
   transform: translate(2px);
 }
 
-/* .design-container */
 .design-container {
   --tr: 90;
   --op: .5;
-
   width: 100%;
   height: 100%;
-
   background: transparent;
   position: absolute;
   top: 0;
   left: 0;
-
   pointer-events: none;
 }
 
-/* .design */
 .design {
   display: block;
-
   background: var(--grey);
   position: absolute;
-
   opacity: var(--op);
   transition: .3s;
 }
@@ -576,7 +529,6 @@ li:not(:last-child)::after {
   top: 56%;
 }
 
-/* states */
 button:hover+.design-container,
 button:active+.design-container,
 button:focus+.design-container {
@@ -622,35 +574,31 @@ button:focus+.design-container {
 }
 
 .modal {
-  display: none; /* Hidden by default */
-  position: fixed; /* Stay in place */
-  z-index: 1; /* Sit on top */
+  display: none;
+  position: fixed;
+  z-index: 1;
   left: 0;
   top: 0;
-  width: 100%; /* Full width */
-  height: 100%; /* Full height */
-  overflow: auto; /* Enable scroll if needed */
-  background-color: rgb(0,0,0); /* Fallback color */
-  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0,0.4);
   border-radius: 15px;
 }
 
-/* Modal Content/Box */
 .modal-content {
   background-color: #fefefe;
-  margin: 15% auto; /* 15% from the top and centered */
+  margin: 15% auto;
   padding: 15px;
   border: 1px solid #888;
-  width: 85%; /* Could be more or less, depending on screen size */
-
+  width: 85%;
   border-radius: 15px;
 }
 
 .modal-body {
   display: flex;
   flex-direction: row;
-
   flex-wrap: wrap;
 }
 
@@ -669,8 +617,6 @@ button:focus+.design-container {
     cover;
   background-position: center center;
   background-repeat: no-repeat;
-
-
   animation: bg-spin 3s linear infinite;
 }
 
@@ -694,56 +640,44 @@ button:focus+.design-container {
   color: white;
   height: 40px;
   width: 100px;
-
   display: inline-block;
 }
 
 .card-back a {
   text-decoration: none;
   color: inherit;
-
 }
 
 .close {
   height: 45px;
   width: 45px;
-
   display: flex;
   justify-self: center;
-
   border-radius: 5px;
-
   background-color: white;
-
   position: fixed;
-
 }
 
 .modal-header {
-
-
-  text-align: center;
-  
+  text-align: center;  
 }
-
 
 .hero {
   background: url('./hero.gif');
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-
   padding: 30px;
-
   height: 100vh;
-
   display: flex;
   align-items: center;
 }
+
 .headsss {
   text-align: center;
   color: #fff;
 }
+
 #hero-cont {
   text-align: right;
   color: #FA8128;
@@ -751,20 +685,19 @@ button:focus+.design-container {
   background-color: #111;
   border-radius: 10px;
 }
-#hero-btn {
-  text-align: center;
-}
 
 #faq_img1{
+  height: 20px;
 	position:absolute;
 	bottom:30px;
-	left:60px;
+	left:78px;
 }
 
 #faq_img2{
+  height: 20px;
 	position:absolute;
 	bottom:30px;
-	left:65px;
+	left:78px;
 }
 
 #faq_img3{
