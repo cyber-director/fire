@@ -4,6 +4,7 @@ body{
 }
 
 #mySidenav a {
+  font-family: 'Work Sans', sans-serif;
   position: fixed;
   left: -80px;
   transition: 0.3s;
@@ -20,31 +21,62 @@ body{
 }
 
 #Home {
+  height: 40px;
   top: 20px;
   background-color: #04AA6D;
 }
 
 #FAQ {
+  height: 40px;
   top: 100px;
   background-color: #2196F3;
 }
 
 #About {
+  height: 40px;
   top: 180px;
   background-color: #f44336;
 }
 
 #search {
+  height: 40px;
   top: 260px;
   background-color: #555;
 }
 
-.faq-heading{
-    font-size: 100px;
-    left:70px;
-    border-bottom: #777;
-    padding: 20px 60px;
+#faq_img1{
+  height: 20px;
+	position:absolute;
+	bottom:30px;
+	left:90px;
 }
+
+#faq_img2{
+  height: 20px;
+	position:absolute;
+	bottom:30px;
+	left:90px;
+}
+
+#faq_img3{
+	position:relative;
+	bottom:-10px;
+	left:15px;
+}
+
+#faq_img4{
+	position:relative;
+	bottom:-10px;
+	left:15px;
+}
+
+.faq-heading{
+  font-size: 100px;
+  left:70px;
+  border-bottom: #777;
+  padding: 20px 60px;
+}
+
 .faq-container{
 display: flex;
 justify-content: center;
@@ -55,9 +87,8 @@ flex-direction: column;
   margin: auto;
   
 }
-/* Style the buttons that are used to open and close the faq-page body */
+
 .faq-page {
-    /* background-color: #eee; */
     color: #444;
     cursor: pointer;
     padding: 30px 20px;
@@ -67,63 +98,62 @@ flex-direction: column;
     transition: 0.4s;
     margin: auto;
 }
+
 .faq-body{
-    margin: auto;
-    /* text-align: center; */
-   width: 50%; 
-   padding: auto;
-   
+  margin: auto;
+  width: 50%; 
+  padding: auto;
 }
-/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+
 .active,
 .faq-page:hover {
-    background-color: #F9F9F9;
+  background-color: #F9F9F9;
 }
-/* Style the faq-page panel. Note: hidden by default */
+
 .faq-body {
-    padding: 0 18px;
-    background-color: white;
-    display: none;
-    overflow: hidden;
+  padding: 0 18px;
+  background-color: white;
+  display: none;
+  overflow: hidden;
 }
+
 .faq-page:after {
-    content: '\02795';
-    /* Unicode character for "plus" sign (+) */
-    font-size: 13px;
-    color: #777;
-    float: right;
-    margin-left: 5px;
+  content: '\02795';
+  font-size: 13px;
+  color: #777;
+  float: right;
+  margin-left: 5px;
 }
+
 .active:after {
-    content: "\2796";
-    /* Unicode character for "minus" sign (-) */
+  content: "\2796";
 }
 
 .faq-heading {
-    margin-top: 0px;
-    margin-bottom: 30px;
-    display: inline-block;
-    position: relative;
-    }
+  margin-top: 0px;
+  margin-bottom: 30px;
+  display: inline-block;
+  position: relative;
+}
   
 .faq-heading::after {
-    content: '';
-    position: absolute;
-    width: 100%;
-    transform: scaleX(0);
-    height: 10px;
-    bottom: 0;
-    left: 0;
-    background: rgb(127,0,180);
-    background: linear-gradient(27deg, rgba(127,0,180,1) 0%, rgba(9,9,121,1) 100%);
-    transform-origin: bottom right;
-    transition: transform 0.25s ease-out;
-  }
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 10px;
+  bottom: 0;
+  left: 0;
+  background: rgb(127,0,180);
+  background: linear-gradient(27deg, rgba(127,0,180,1) 0%, rgba(9,9,121,1) 100%);
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
   
 .faq-heading:hover::after {
-    transform: scaleX(1);
-    transform-origin: bottom left;
-  }
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
 
 @media only screen and (max-width: 1024px) {
   .faq-heading {
