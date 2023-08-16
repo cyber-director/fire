@@ -194,7 +194,7 @@ h2 {
 
 @media (min-width: 768px) {
   .content {
-    margin-left: 220px;
+    margin-left: 50px;
   }
 
   h1 {
@@ -722,11 +722,12 @@ button:focus+.design-container {
 	left:65px;
 }
 
-.sec4 {
+.sec4 { 
   display: flex;
   flex-direction: row;
-
-  overflow: auto;
+  word-wrap:normal;
+  overflow: hidden;
+  float: right;
 }
 
 
