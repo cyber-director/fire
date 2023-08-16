@@ -10,29 +10,31 @@
 </head>
 
 <body>
-  <div id="mySidenav" class="sidenav" style="display: block;">
-    <a href="./index.html" id="Home">Home<img src="https://cdn-icons-png.flaticon.com/128/69/69524.png" height="20px" width="20px" id="faq_img1"></a>
-    <a href="./faq.html" id="FAQ">FAQs<img src="https://cdn-icons-png.flaticon.com/128/2859/2859733.png" height="20px" width="20px" id="faq_img2"></a>
-    <a href="./about.html" id="About">About<img src="https://cdn-icons-png.flaticon.com/128/5269/5269399.png" height="20px" width="20px" id="faq_img3"></a>
-    <a href="#" id="search" onclick="searchContent()">Search<img src="https://cdn-icons-png.flaticon.com/128/3031/3031293.png" height="20px" width="20px" id="faq_img4"></a>
+  <div id="mySidenav" class="sidenav" style="display: none;">
+    <a href="./index.html" id="Home">Home<img src="https://cdn-icons-png.flaticon.com/128/69/69524.png" height="20px"
+        width="20px" id="faq_img1"></a>
+    <a href="./faq.html" id="FAQ">FAQs<img src="https://cdn-icons-png.flaticon.com/128/2859/2859733.png" height="20px"
+        width="20px" id="faq_img2"></a>
+    <a href="./about.html" id="About">About<img src="https://cdn-icons-png.flaticon.com/128/5269/5269399.png"
+        height="20px" width="20px" id="faq_img3"></a>
+    <a href="#" id="search" onclick="searchContent()">Search<img
+        src="https://cdn-icons-png.flaticon.com/128/3031/3031293.png" height="20px" width="20px" id="faq_img4"></a>
   </div>
 
   <div class="hero">
     <section id="section1">
       <h1 class="headsss">Fire Ecology</h1>
-      <p id="hero-cont">Fire is an integral and natural component of many terrestrial ecosystems, playing a crucial role in shaping
+      <p id="hero-cont">Fire is an integral and natural component of many terrestrial ecosystems, playing a crucial role
+        in shaping
         landscapes and influencing the composition of plant and animal communities. Fire ecology is the scientific
         study of the relationship between fire and the living and non-living components of ecosystems. It seeks to
         understand how fire affects different ecosystems, the adaptations of organisms to fire, and the ecological
         consequences of fire disturbances. Fire has been a part of the Earth's history for millions of years, and
-        understanding fire ecology is essential for effective land management and conservation efforts.</p>
-        <a class="button" href="#section2" style="--color:#8400ff;">
-          <span></span>
-          <span></span>
-          <span></span>
-          <span></span>
-          Read More
-        </a>
+        understanding fire ecology is essential for effective land management and conservation efforts.
+      </p>
+      <a class="button" id="contBtn" onclick="contRead()" href="#section2" style="--color:#8400ff;">
+        Read More
+      </a>
     </section>
   </div>
   <div class="content">
@@ -353,15 +355,23 @@
 
     <section id="section4" class="cont">
       <h2>Fire Suppression and Its Consequences</h2>
-      <p>
-        As human populations have expanded into fire-prone regions, there has been an increasing focus on fire
-        suppression to protect lives and property. While fire suppression can be effective in preventing wildfires from
-        spreading and causing immediate harm, it can also lead to unintended consequences for ecosystems. When fires are
-        suppressed, fuel accumulates on the forest floor, making future fires more intense and damaging when they do
-        occur. Additionally, fire exclusion can disrupt natural ecological processes and negatively impact fire-adapted
-        species that rely on periodic fire events.
-        Prescribed burns, also known as controlled burns, are intentional fires set under controlled conditions to mimic
-        the natural role of fire in ecosystems. These fires are carefully planned and managed to achieve specific
+      <div class="sec4">
+        <p class="s4c">
+          As human populations have expanded into fire-prone regions, there has been an increasing focus on fire
+          suppression to protect lives and property. While fire suppression can be effective in preventing wildfires
+          from
+          spreading and causing immediate harm, it can also lead to unintended consequences for ecosystems. When fires
+          are
+          suppressed, fuel accumulates on the forest floor, making future fires more intense and damaging when they do
+          occur. </p>
+          <img src="chart.png" alt="chart" class="s4c" width="900px" height="400px" style="border-radius: 5px;">
+        </div>
+        <p> Additionally, fire exclusion can disrupt natural ecological processes and negatively impact
+          fire-adapted
+          species that rely on periodic fire events.
+          Prescribed burns, also known as controlled burns, are intentional fires set under controlled conditions to
+          mimic
+          the natural role of fire in ecosystems. These fires are carefully planned and managed to achieve specific
         ecological objectives, such as reducing fuel loads, promoting plant diversity, and restoring fire-dependent
         ecosystems. Prescribed burns are an essential tool in fire ecology and land management, helping to reduce the
         risk of uncontrolled wildfires while restoring and maintaining healthy ecosystems.

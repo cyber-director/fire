@@ -1,4 +1,5 @@
 window.addEventListener('scroll', function() {
+
   const scrollY = window.scrollY;
   const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
   const scrollPercentage = scrollY / maxScroll;
@@ -98,4 +99,14 @@ window.onclick = function(event) {
   if (event.target == modal) {
     modal.style.display = "none";
   }
+}
+
+function contRead() {
+  let nav = document.getElementById("mySidenav");
+  nav.style.display = "block";
+
+  let cont = document.getElementById("section2");
+  cont.scrollIntoView();
+
+  document.body.style.overflow = "auto";
 }
